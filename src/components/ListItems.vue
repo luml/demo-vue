@@ -2,7 +2,10 @@
   <div id="list">
     <h3>{{msg}}</h3>
     <ul v-for="count in 3" :key="count">
-      <li>{{ count }} 💚</li>
+      <li>
+        💚
+        <a href="/">Go to doc {{count}}</a>
+      </li>
     </ul>
   </div>
 </template>

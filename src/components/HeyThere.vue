@@ -1,7 +1,7 @@
 <template>
   <div id="hey">
     <h3>Nice to meet you, {{name}}</h3>
-    <h4>Love might happen in the most unexcepted place and time</h4>
+    <h4>**Love might happen in the most unexcepted place and time**</h4>
   </div>
 </template>
 
@@ -13,3 +13,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+h4 {
+  color: deepPink;
+  font-style: italic;
+}
+</style>
