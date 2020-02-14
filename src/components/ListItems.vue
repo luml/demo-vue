@@ -1,21 +1,19 @@
 <template>
-    <div id="list">
-        <h3>{{msg}}</h3>
-        <ul v-for="count in 5" :key="count">
-            <li>
-                {{ count }}
-            </li>
-        </ul>
-    </div>
+  <div id="list">
+    <h3>{{msg}}</h3>
+    <ul v-for="count in 3" :key="count">
+      <li>{{ count }} 💚</li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'ListItems',
+  name: "ListItems",
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
