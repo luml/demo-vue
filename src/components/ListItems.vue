@@ -1,7 +1,7 @@
 <template>
   <div id="list">
     <h3>{{msg}}</h3>
-    <ul v-for="count in 3" :key="count">
+    <ul v-for="count in arr" :key="count">
       <li>
         💚
         <a href="/">Go to doc {{count}}</a>
@@ -14,7 +14,8 @@
 export default {
   name: "ListItems",
   props: {
-    msg: String
+    msg: String,
+    arr: [String]
   }
 };
 </script>
