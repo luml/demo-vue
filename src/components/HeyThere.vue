@@ -4,9 +4,9 @@
     <input v-model="name" />
     <h4>**Love might happen in the most unexcepted place and time**</h4>
     <div>
-      <button v-on:click="disagree">Disagree</button>
-      <code>{{ opinion }}</code>
-      <button v-on:click="agree">Agree</button>
+      <button>Disagree</button>
+      <code></code>
+      <button>Agree</button>
     </div>
   </div>
 </template>
@@ -15,15 +15,24 @@
 export default {
   name: "HeyThere",
   props: {
-    name: String,
-    opinion: String,
-    methods: {
-      disagree: function() {
-        this.opinion = "You think?"
-      },
-      agree: function() {
-        this.opinion = "You kidding!"
-      }
+    person: {
+      type: String
+    },
+    // opinion: {
+    //   type: String
+    // }
+    // methods: {
+    //   disagree: function() {
+    //     this.opinion = "You think?"
+    //   },
+    //   agree: function() {
+    //     this.opinion = "You kidding!"
+    //   }
+    // }
+  },
+  data(){
+    return {
+      name:this.person
     }
   }
 };
