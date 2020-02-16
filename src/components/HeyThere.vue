@@ -4,9 +4,9 @@
     <input v-model="name" />
     <h4>**Love might happen in the most unexcepted place and time**</h4>
     <div>
-      <button>Disagree</button>
-      <code></code>
-      <button>Agree</button>
+      <button @click="diagree">Disagree</button>
+      <code>{{result}}</code>
+      <button @click="agree">Agree</button>
     </div>
   </div>
 </template>
@@ -18,21 +18,22 @@ export default {
     person: {
       type: String
     },
-    // opinion: {
-    //   type: String
-    // }
-    // methods: {
-    //   disagree: function() {
-    //     this.opinion = "You think?"
-    //   },
-    //   agree: function() {
-    //     this.opinion = "You kidding!"
-    //   }
-    // }
+    opinion: {
+      type: String
+    }
   },
   data(){
     return {
-      name:this.person
+      name:this.person,
+      result:this.opinion
+    }
+  },
+  methods: {
+    disagree() {
+      this.opinion = 'You think?'
+    },
+    agree() {
+      this.opinion = "You're kidding!"
     }
   }
 };
