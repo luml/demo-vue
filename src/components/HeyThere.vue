@@ -4,10 +4,11 @@
     <input v-model="name" />
     <h4>**Love might happen in the most unexcepted place and time**</h4>
     <div>
-      <button @click="diagree">Disagree</button>
-      <code>{{result}}</code>
-      <button @click="agree">Agree</button>
+      <button v-on:click="disagree">Disagree</button>
+      <code>{{vote}}</code>
+      <button v-on:click="agree">Agree</button>
     </div>
+    <p>Final Vote: {{showOpinion}}</p>
   </div>
 </template>
 
@@ -17,23 +18,31 @@ export default {
   props: {
     person: {
       type: String
-    },
-    opinion: {
-      type: String
     }
   },
-  data(){
+  data() {
     return {
-      name:this.person,
-      result:this.opinion
-    }
+      name: this.person,
+      vote: 0
+    };
   },
   methods: {
     disagree() {
-      this.opinion = 'You think?'
+      this.vote++;
     },
     agree() {
-      this.opinion = "You're kidding!"
+      this.vote--;
+    }
+  },
+  computed: {
+    showOpinion() {
+      if (this.vote > 0) {
+        return "You think?";
+      } else if (this.vote < 0) {
+        return "You're kidding!";
+      } else{
+        return "There's no answer about this question";
+      }
     }
   }
 };
