@@ -8,7 +8,7 @@
       <code>{{vote}}</code>
       <button v-on:click="agree">Agree</button>
     </div>
-    <p>Final Vote: {{showOpinion}}</p>
+    <p>Final Vote: {{showVoted}}</p>
   </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
     }
   },
   computed: {
-    showOpinion() {
+    showVoted() {
       if (this.vote > 0) {
         return "You think?";
       } else if (this.vote < 0) {
