@@ -27,7 +27,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>-->
-    <p>--Based on Vue offical tutorial--</p>
+    <p v-html="ps"></p>
   </div>
 </template>
 
@@ -36,6 +36,11 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  data() {
+    return {
+      ps: `--Based on Vue offical tutorial <a href="https://vuejs.org/">https://vuejs.org/</a>, and inspired by <a href="https://codepen.io/sdras/pen/egEgXb">https://codepen.io/sdras/pen/egEgXb</a>--`
+    }
   }
 };
 </script>
@@ -58,5 +63,6 @@ a {
 }
 p {
   font-style: italic;
+  font-size: 10px;
 }
 </style>
