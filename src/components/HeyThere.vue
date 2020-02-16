@@ -64,4 +64,13 @@ button {
   border-radius: 5px;
   width: 150px;
 }
+code {
+  margin: 0 10px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+}
+p {
+  font-weight: bold;
+}
 </style>
