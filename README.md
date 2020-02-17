@@ -1,4 +1,4 @@
-# my-vue-project
+# my-vue-project is a client-side single page static application based on Vue.js offical tutorial.
 
 ## Project setup
 ```
