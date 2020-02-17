@@ -41,7 +41,7 @@ export default {
       } else if (this.vote < 0) {
         return "You're kidding!";
       } else{
-        return "There's no answer about this question";
+        return "There's no answer for this question";
       }
     }
   }

@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to the simplest Demo Vue.js App" />
     <ListItems msg="App Content Docs" arr=123 />
-    <HeyThere person="Elio" />
+    <HeyThere person="Zach" />
   </div>
 </template>
 
