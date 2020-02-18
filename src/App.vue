@@ -2,7 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to the simplest Demo Vue.js App" />
-    <ListItems msg="App Content Docs" arr=123 />
+    <ListItems msg="App Content Docs" arr="123" />
     <HeyThere person="Zach" />
   </div>
 </template>
@@ -23,6 +23,9 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: bisque;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

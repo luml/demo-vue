@@ -4,9 +4,9 @@
     <input v-model="name" />
     <h4>**Love might happen in the most unexcepted place and time**</h4>
     <div>
-      <button v-on:click="disagree">Disagree</button>
+      <button class="unvote" v-on:click="disagree">Disagree</button>
       <code>{{vote}}</code>
-      <button v-on:click="agree">Agree</button>
+      <button class="vote" v-on:click="agree">Agree</button>
     </div>
     <p>Final Vote: {{showVoted}}</p>
   </div>
@@ -40,7 +40,7 @@ export default {
         return "You think?";
       } else if (this.vote < 0) {
         return "You're kidding!";
-      } else{
+      } else {
         return "There's no answer for this question";
       }
     }
@@ -59,10 +59,19 @@ h4 {
 input {
   margin-top: 10px;
   padding: 0.3rem;
+  text-align: center;
 }
 button {
   border-radius: 5px;
   width: 150px;
+}
+.unvote {
+  background-color: black;
+  color: white;
+}
+.vote {
+  background-color: #30ff99;
+  color: black;
 }
 code {
   margin: 0 10px;

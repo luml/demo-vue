@@ -4,7 +4,8 @@
     <ul v-for="count in arr" :key="count">
       <li>
         💚
-        <a href="/">Go to doc {{count}}</a>
+        <!-- how to imply Vue router -->
+        <a href="/docs/doc_1.html">Go to doc {{count}}</a>
       </li>
     </ul>
   </div>
