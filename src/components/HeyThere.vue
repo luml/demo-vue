@@ -37,9 +37,9 @@ export default {
   computed: {
     showVoted() {
       if (this.vote > 0) {
-        return "You think?";
+        return "Ask later";
       } else if (this.vote < 0) {
-        return "You're kidding!";
+        return "Can't count on it!";
       } else {
         return "There's no answer for this question";
       }
