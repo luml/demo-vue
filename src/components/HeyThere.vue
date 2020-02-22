@@ -2,7 +2,7 @@
   <div id="hey">
     <h3>Nice to meet you, {{name}}</h3>
     <input v-model="name" />
-    <h4>**Love might happen in the most unexcepted place and time**</h4>
+    <h4>**Love might happen in the most unexcepted place and time ? **</h4>
     <div>
       <button class="unvote" v-on:click="disagree">Disagree</button>
       <code>{{vote}}</code>
@@ -37,9 +37,9 @@ export default {
   computed: {
     showVoted() {
       if (this.vote > 0) {
-        return "Ask later";
+        return "Ask again later";
       } else if (this.vote < 0) {
-        return "Can't count on it!";
+        return "Don't count on it!";
       } else {
         return "There's no answer for this question";
       }
@@ -68,10 +68,16 @@ button {
 .unvote {
   background-color: black;
   color: white;
+  border-radius: 50px;
+  background: linear-gradient(225deg, #1f1f1f, #242424);
+  box-shadow: -24px 24px 48px #121212, 24px -24px 48px #323232;
 }
 .vote {
   background-color: #30ff99;
   color: black;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #6da838, #5c8d2f);
+  box-shadow: 24px -24px 48px #36531c, -24px 24px 48px #96e74c;
 }
 code {
   margin: 0 10px;
