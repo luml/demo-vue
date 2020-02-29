@@ -35,12 +35,12 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: String,
+    msg: String
   },
   data() {
     return {
       ps: `--Based on Vue offical tutorial <a href="https://vuejs.org/">https://vuejs.org/</a>, and inspired by <a href="https://codepen.io/sdras/pen/egEgXb">https://codepen.io/sdras/pen/egEgXb</a>--`
-    }
+    };
   }
 };
 </script>
@@ -48,7 +48,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
-  margin: 40px 0 0;
+  margin: 2rem 0;
 }
 ul {
   list-style-type: none;
@@ -56,13 +56,13 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 a {
   color: #42b983;
 }
 p {
   font-style: italic;
-  font-size: 10px;
+  font-size: 1rem;
 }
 </style>

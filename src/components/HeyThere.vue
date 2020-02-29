@@ -57,25 +57,25 @@ h4 {
   font-style: italic;
 }
 input {
-  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
   padding: 0.3rem;
   text-align: center;
 }
 button {
-  border-radius: 5px;
-  width: 150px;
+  border-radius: 1rem;
+  min-width: 150px;
 }
 .unvote {
   background-color: black;
   color: white;
-  border-radius: 50px;
   background: linear-gradient(225deg, #1f1f1f, #242424);
   box-shadow: -24px 24px 48px #121212, 24px -24px 48px #323232;
 }
 .vote {
   background-color: #30ff99;
   color: black;
-  border-radius: 50px;
   background: linear-gradient(45deg, #6da838, #5c8d2f);
   box-shadow: 24px -24px 48px #36531c, -24px 24px 48px #96e74c;
 }
