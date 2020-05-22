@@ -12,6 +12,7 @@
         <button v-on:click="alertYou">{{but}}</button>
       </div>
     </div>
+    <p v-html="tbd"></p>
   </div>
 </template>
 
@@ -28,7 +29,12 @@ export default {
     alertYou() {
       window.alert(this.alert)
     }
-  }
+  },
+  data() {
+    return {
+      tbd: `Here are some a link and buttons don't do anything by far`
+    }
+  },
 };
 </script>
 
