@@ -4,10 +4,14 @@
     <ul v-for="count in arr" :key="count">
       <li>
         💚
-        <!-- how to imply Vue router -->
         <a href="/docs/doc_1.html">Go to doc {{count}}</a>
       </li>
     </ul>
+    <div class="button-area">
+      <div v-for="but in buttons" :key="but">
+        <button v-on:click="alertYou">{{but}}</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,7 +20,14 @@ export default {
   name: "ListItems",
   props: {
     msg: String,
-    arr: [String]
+    arr: [String],
+    buttons: [String],
+    alert: String
+  },
+  methods: {
+    alertYou() {
+      window.alert(this.alert)
+    }
   }
 };
 </script>
@@ -36,5 +47,19 @@ li {
 }
 a {
   color: #42b983;
+}
+button {
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  background: #42b983;
+  background: linear-gradient(90deg, #42b983, #42e983);
+}
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+.button-area>div {
+  margin: 0.2rem;
 }
 </style>

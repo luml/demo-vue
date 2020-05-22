@@ -2,8 +2,8 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to the simplest Demo Vue.js App" />
-    <ListItems msg="App Content Docs" arr="123" />
-    <HeyThere person="Zach" />
+    <ListItems msg="App Content Docs" arr="ABC" buttons="abc" alert="I warn you Jimmy!" />
+    <HeyThere person="Jimmy" />
   </div>
 </template>
 
