@@ -46,9 +46,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-/* .light-mode h1, h3, p {
+/* Have to style two times for color h3 and p element under light mode */
+.light-mode h3 {
   color: black;
-} */
+}
+.light-mode p {
+  color: black;
+}
 .dark-mode {
   background: #000;
   color: #bbb;
