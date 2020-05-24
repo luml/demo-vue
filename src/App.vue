@@ -45,6 +45,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 /* Have to style two times for color h3 and p element under light mode */
 .light-mode h3 {
