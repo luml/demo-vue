@@ -4,11 +4,12 @@
     <ul v-for="count in arr" :key="count">
       <li>
         💚
-        <a href="/docs/doc_1.html">Go to doc {{count}}</a>
+        <a href="/docs/doc_1.html">Check postcard {{count}}</a>
       </li>
     </ul>
+    <div class="aman"><img src="../images/nordwood-themes-nqPe1juwcdQ-unsplash.jpg" alt="unsplash photo"></div>
     <div class="button-area">
-      <div v-for="but in buttons" :key="but">
+      <div v-for="but in bs" :key="but">
         <button v-on:click="alertYou">{{but}}</button>
       </div>
     </div>
@@ -22,19 +23,29 @@ export default {
   props: {
     msg: String,
     arr: [String],
-    buttons: [String],
-    alert: String
+    buttons: [String]
   },
   methods: {
     alertYou() {
-      window.alert(this.alert)
+      switch (event.target.innerText) {
+        case 'blur':
+          document.querySelector('.aman>img').style.filter = 'blur(3px)'
+          break
+        case 'contrast':
+          document.querySelector('.aman>img').style.filter = 'contrast(150%)'
+          break
+        case 'brightness':
+          document.querySelector('.aman>img').style.filter = 'brightness(0.5)'
+          break
+      }
     }
   },
   data() {
     return {
+      bs: ['blur', 'contrast', 'brightness'],
       tbd: `Here are some a link and buttons don't do anything by far`
     }
-  },
+  }
 };
 </script>
 
@@ -55,7 +66,7 @@ a {
   color: #42b983;
 }
 button {
-  width: 3rem;
+  width: 5rem;
   height: 1.5rem;
   border-radius: 0.5rem;
   background: #42b983;
@@ -67,5 +78,9 @@ button {
 }
 .button-area>div {
   margin: 0.2rem;
+}
+img {
+  width: 20%;
+  height: auto;
 }
 </style>

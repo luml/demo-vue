@@ -2,7 +2,7 @@
   <div id="app" :class="modeClass">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to the simplest Demo Vue.js App" />
-    <ListItems msg="App Content Docs" arr="ABC" buttons="abc" alert="I warn you Jimmy!" />
+    <ListItems msg="App Content Docs" arr="ABC" />
     <HeyThere person="Jimmy" />
     <label class="checkbox">
       <input type="checkbox" v-model="darkMode">
@@ -57,6 +57,7 @@ body {
 .dark-mode {
   background: #000;
   color: #bbb;
+  margin: -1rem;
 }
 .dark-mode h1, h3, p {
   color: #bbb;
