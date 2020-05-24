@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       bs: ['blur', 'contrast', 'brightness'],
-      tbd: `Here are some a link and buttons don't do anything by far`
+      tbd: `We are gonna skew a picture`
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="modeClass">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img alt="Vue logo" src="./images/nordwood-themes-nqPe1juwcdQ-unsplash.jpg" style="width: 60%" />
     <HelloWorld msg="Welcome to the simplest Demo Vue.js App" />
     <ListItems msg="App Content Docs" arr="ABC" />
     <HeyThere person="Jimmy" />
