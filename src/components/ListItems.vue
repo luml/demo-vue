@@ -1,12 +1,17 @@
 <template>
   <div id="list">
     <h3>{{msg}}</h3>
-    <ul v-for="count in arr" :key="count">
-      <li>
-        💚
-        <a href="/docs/doc_1.html">Check postcard {{count}}</a>
+    <div class="linkList">
+      <ul v-for="count in arr" :key="count">
+        <li>
+          <a
+            v-bind:href="href"
+            v-bind:class="{ active: isActive }"
+            v-on:click="go"
+          >Go doc{{count}}</a>
       </li>
     </ul>
+    </div>
     <div class="aman"><img src="../images/nordwood-themes-nqPe1juwcdQ-unsplash.jpg" alt="unsplash photo"></div>
     <div class="button-area">
       <div v-for="but in bs" :key="but">
@@ -18,12 +23,23 @@
 </template>
 
 <script>
+import routes from '../routes'
+
 export default {
   name: "ListItems",
   props: {
     msg: String,
     arr: [String],
-    buttons: [String]
+    buttons: [String],
+    href: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    isActive() {
+      return this.href === this.$root.currentRoute
+    }
   },
   methods: {
     alertYou() {
@@ -38,6 +54,15 @@ export default {
           document.querySelector('.aman>img').style.filter = 'brightness(0.5)'
           break
       }
+    },
+    go(event) {
+      event.preventDefault()
+      this.$root.currentRoute = this.href
+      window.history.pushState(
+        null,
+        routes[this.href],
+        this.href
+      )
     }
   },
   data() {
@@ -53,6 +78,11 @@ export default {
 <style scoped>
 h3 {
   margin: 0;
+}
+.linkList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 ul {
   list-style-type: none;
@@ -82,5 +112,8 @@ button {
 img {
   width: 20%;
   height: auto;
+}
+.active {
+  color: cornflowerblue
 }
 </style>

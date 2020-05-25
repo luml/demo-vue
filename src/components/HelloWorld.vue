@@ -62,7 +62,8 @@ a {
   color: #42b983;
 }
 p {
+  margin-top: -1rem;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
 </style>

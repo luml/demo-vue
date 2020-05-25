@@ -2,7 +2,7 @@
   <div id="app" :class="modeClass">
     <img alt="Vue logo" src="./images/nordwood-themes-nqPe1juwcdQ-unsplash.jpg" style="width: 60%" />
     <HelloWorld msg="Welcome to the simplest Demo Vue.js App" />
-    <ListItems msg="App Content Docs" arr="ABC" />
+    <ListItems msg="Postcard collection" arr="123" />
     <HeyThere person="Jimmy" />
     <label class="checkbox">
       <input type="checkbox" v-model="darkMode">
@@ -25,14 +25,15 @@ export default {
   },
   data() {
     return {
-      darkMode: false
+      darkMode: false,
+      currentRoute: window.location.pathname
     }
   },
   computed: {
-    modeClass(){
+    modeClass() {
       return this.darkMode ? 'dark-mode' : 'light-mode';
     }
-  },
+  }
 };
 </script>
 
