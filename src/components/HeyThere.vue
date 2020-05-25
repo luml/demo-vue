@@ -8,7 +8,7 @@
       <code>{{vote}}</code>
       <button class="vote" v-on:click="agree">Agree</button>
     </div>
-    <p>Final Vote: {{showVoted}}</p>
+    <p>Final Vote: {{showVoted | uppercase}}</p>
   </div>
 </template>
 
@@ -43,6 +43,11 @@ export default {
       } else {
         return "There's no answer for this question";
       }
+    }
+  },
+  filters: {
+    uppercase: function (value) {
+      return value.toUpperCase()
     }
   }
 };
